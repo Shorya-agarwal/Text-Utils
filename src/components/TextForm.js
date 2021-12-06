@@ -5,6 +5,7 @@ export default function TextForm(props) {
     const changeUp = ()=>{
         let newText = text.toUpperCase();
         setText(newText)
+        props.showAlert("Converted to Uppecase","success")
     }
     const handleOnChange = (event)=>{
         setText(event.target.value)

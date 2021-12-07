@@ -32,6 +32,12 @@ export default function Navbar(props) {
                 <a className="nav-link disabled" href="/" tabIndex="-1">Disabled</a>
               </li> */}
             </ul>
+            {/* <div className="d-flex">
+                <div className="bg-primary rounded mx-2" onClick={()=>{props.togglemode("primary")}} style = {{height: '25px', width: '28px', cursor: "pointer"}}></div>
+                <div className="bg-success rounded mx-2" onClick={()=>{props.togglemode("success")}} style = {{height: '25px', width: '28px', cursor: "pointer"}}></div>
+                <div className="bg-danger rounded mx-2" onClick={()=>{props.togglemode("danger")}} style = {{height: '25px', width: '28px', cursor: "pointer"}}></div>
+                <div className="bg-warning rounded mx-2" onClick={()=>{props.togglemode("warning")}} style = {{height: '25px', width: '28px', cursor: "pointer"}}></div>
+            </div> */}
             <div className="form-check form-switch">
               <input className="form-check-input" onClick={props.togglemode} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
               <label className={`form-check-label mx-3 text-${props.mode==='light' ? 'dark':'light'}`} htmlFor="flexSwitchCheckDefault">Enbale Dark Mode</label>

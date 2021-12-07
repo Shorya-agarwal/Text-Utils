@@ -18,17 +18,29 @@ function App() {
       setAlert(null)
     }, 1000);
   }
-  const togglemode = ()=>{
+  // const removeBodyClass=()=>{
+  //   document.body.classList.remove('bg-light')
+  //   document.body.classList.remove('bg-warning')
+  //   document.body.classList.remove('bg-success')
+  //   document.body.classList.remove('bg-danger')
+  //   document.body.classList.remove('bg-primary')
+  //   document.body.classList.remove('bg-dark')
+  // }
+  const togglemode = (cls)=>{
+    // removeBodyClass();
+    // document.body.classList.add('bg-'+cls)
     if(mode ==="light"){
       setMode("dark");
       document.body.style.backgroundColor='#081849';
       showAlert("Dark Mode has been enabled", "success")
+      document.title = 'TextUtils - Dark Mode'
 
     }
     else{
       setMode("light")
       document.body.style.backgroundColor='white';
       showAlert("Light Mode has been enabled", "success")      
+      document.title = 'TextUtils - Light Mode'
     }
   }
   return (

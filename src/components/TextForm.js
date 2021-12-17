@@ -21,7 +21,7 @@ export default function TextForm(props) {
         let text = document.getElementById("myTextBox")
         text.select();
         navigator.clipboard.writeText(text.value)
-        props.showAlert("Text COpied to ClipBoard","success")
+        props.showAlert("Text Copied to ClipBoard","success")
     }
     const handleExtraSpace=()=>{
         let newText = text.split(/[ ]+/)
@@ -46,7 +46,7 @@ export default function TextForm(props) {
         </div>
         <div className="container my-3" style= {{color: props.mode ==='dark' ? 'white' :'#081849'}}>
             <h1>Your Text Summary</h1>
-            <p>{text.split(" ").length} words, {text.length} characters</p>
+            <p>{text.split(" ").filter((el)=> {return el.length!==0}).length} words, {text.length} characters</p>
             <p>{0.48*(text.split(" ").length)/60} Minutes Average reading time</p>
             <h2>Priview</h2>
             <p>{text.length>0? text: "Enter something to preview it here"}</p>
